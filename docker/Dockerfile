@@ -6,7 +6,7 @@ FROM thanosio/thanos:v0.24.0 AS thanos
 FROM philipslabs/variant:v0.0.26 AS variant
 
 ## Build final image
-FROM alpine:3.15.0
+FROM alpine:3.15.1
 LABEL maintainer="andy.lo-a-foe@philips.com"
 RUN apk add --no-cache supervisor jq curl && rm -rf /tmp/* /var/cache/apk/*
 RUN apk add --no-cache yq --repository http://dl-cdn.alpinelinux.org/alpine/edge/community
